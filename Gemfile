@@ -47,7 +47,7 @@ gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
 
 # use calculateHours
-gem 'calculateHours'
+#gem 'calculateHours'
 
 group :development, :test do
   gem 'sqlite3'
