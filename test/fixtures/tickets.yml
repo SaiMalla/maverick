@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  batchnumber: 1
+  manufacturedate: 2019-03-05 23:41:13
+  expirydate: 2019-03-05 23:41:13
+  purchasepoint: MyString
+  description: MyString
+  resolution: MyString
+  customer: one
+  caller_type: one
+  ticket_type: one
+  ticket_sub_type: one
+  product: one
+  product_sku: one
+  ticket_status: one
+  ticket_sub_status: one
+  ticket_attachment: one
+  employee: one
+  source: one
+  tag_user: one
+
+two:
+  batchnumber: 1
+  manufacturedate: 2019-03-05 23:41:13
+  expirydate: 2019-03-05 23:41:13
+  purchasepoint: MyString
+  description: MyString
+  resolution: MyString
+  customer: two
+  caller_type: two
+  ticket_type: two
+  ticket_sub_type: two
+  product: two
+  product_sku: two
+  ticket_status: two
+  ticket_sub_status: two
+  ticket_attachment: two
+  employee: two
+  source: two
+  tag_user: two

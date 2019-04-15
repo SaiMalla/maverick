@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @ticket_status.status %>
+</p>
+
+<p>
+  <strong>Createddate:</strong>
+  <%= @ticket_status.createddate %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_status_path(@ticket_status) %> |
+<%= link_to 'Back', ticket_statuses_path %>

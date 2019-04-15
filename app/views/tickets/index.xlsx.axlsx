@@ -1,0 +1,23 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  project_heading = style.add_style(b: true, sz: 14)
+  heading = style.add_style(b: true)
+
+  wb.add_worksheet(name: "Tickets") do |sheet|
+    # Add a title row
+    sheet.add_row ["New Tickets"], style: project_heading
+    # Add the date this was downloaded
+    sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")]
+    # Add a blank row
+    sheet.add_row []
+    # Create the header row
+    sheet.add_row ["ID", "batchnumber", "manufacturedate", "expirydate", "purchasepoint", "description", "resolution", "customer_id", "caller_type_id", "ticket_type_id", "ticket_sub_type_id", "product_id", "product_sku_id", "ticket_status_id", "ticket_sub_status_id", "ticket_attachment_id", "employee_id", "source_id"], style: heading
+    # Create the database reference row
+    sheet.add_row ["id", "batchnumber", "manufacturedate", "expirydate", "purchasepoint", "description", "resolution", "customer_id", "caller_type_id", "ticket_type_id", "ticket_sub_type_id", "product_id", "product_sku_id", "ticket_status_id", "ticket_sub_status_id", "ticket_attachment_id", "employee_id", "source_id"], style: heading
+    # Create entries for each item
+    @tickets.each do |item|
+      sheet.add_row [item.id, ticket.batchnumber, ticket.manufacturedate, ticket.expirydate, ticket.purchasepoint, ticket.description, ticket.resolution, ticket.customer_id, ticket.caller_type_id, ticket.ticket_type_id, ticket.ticket_sub_type_id, ticket.product_id, ticket.product_sku_id, ticket.ticket_status_id, ticket.ticket_sub_status_id, ticket.ticket_attachment_id, ticket.employee_id, ticket.source_id]
+    end
+  end
+end

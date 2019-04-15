@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticketsubstatus:</strong>
+  <%= @ticket_sub_status.ticketsubstatus %>
+</p>
+
+<p>
+  <strong>Creatredby:</strong>
+  <%= @ticket_sub_status.creatredby %>
+</p>
+
+<p>
+  <strong>Ticket status:</strong>
+  <%= @ticket_sub_status.ticket_status %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_sub_status_path(@ticket_sub_status) %> |
+<%= link_to 'Back', ticket_sub_statuses_path %>

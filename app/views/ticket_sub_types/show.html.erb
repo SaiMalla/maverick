@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticketsubtype:</strong>
+  <%= @ticket_sub_type.ticketsubtype %>
+</p>
+
+<p>
+  <strong>Createdby:</strong>
+  <%= @ticket_sub_type.createdby %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @ticket_sub_type.active %>
+</p>
+
+<p>
+  <strong>Ticket type:</strong>
+  <%= @ticket_sub_type.ticket_type %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_sub_type_path(@ticket_sub_type) %> |
+<%= link_to 'Back', ticket_sub_types_path %>

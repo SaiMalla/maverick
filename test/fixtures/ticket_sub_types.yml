@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticketsubtype: MyString
+  createdby: 1
+  active: false
+  ticket_type: one
+
+two:
+  ticketsubtype: MyString
+  createdby: 1
+  active: false
+  ticket_type: two

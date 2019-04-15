@@ -1,0 +1,109 @@
+<%= form_with(model: ticket, local: true) do |form| %>
+  <% if ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+<h1>Assign</h1>
+<%= form_tag :action => 'create' do %>
+<% end -%>
+  
+
+
+
+  <div class="field">
+    <%= form.label :batchnumber %>
+    <%= form.number_field :batchnumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :manufacturedate %>
+    <%= form.datetime_select :manufacturedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expirydate %>
+    <%= form.datetime_select :expirydate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchasepoint %>
+    <%= form.text_field :purchasepoint %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resolution %>
+    <%= form.text_field :resolution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caller_type_id %>
+    <%= form.text_field :caller_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_type_id %>
+    <%= form.text_field :ticket_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_sub_type_id %>
+    <%= form.text_field :ticket_sub_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_sku_id %>
+    <%= form.text_field :product_sku_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_status_id %>
+    <%= form.text_field :ticket_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticket_sub_status_id %>
+    <%= form.text_field :ticket_sub_status_id %>
+  </div>
+
+
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.text_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_id %>
+    <%= form.text_field :source_id %>
+  </div>
+
+  
+  
+ <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

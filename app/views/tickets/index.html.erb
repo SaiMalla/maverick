@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<h1>Tickets</h1>
+
+
+
+<%=
+  link_to 'Download as Excel',
+  tickets_path(format: :xlsx)
+%>
+
+<%=
+  link_to 'Upload from Excel',
+  new_tickets_import_path
+%>
+
+
+
+<a href="/assign">Assign</a>
+
+<a href="/calculate_sla">Calculate_sla</a>
+
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Batchnumber</th>
+      <th>Manufacturedate</th>
+      <th>Expirydate</th>
+      <th>Purchasepoint</th>
+      <th>Description</th>
+      <th>Resolution</th>
+      <th>Customer</th>
+      <th>Caller type</th>
+      <th>Ticket type</th>
+      <th>Ticket sub type</th>
+      <th>Product</th>
+      <th>Product sku</th>
+      <th>Ticket status</th>
+      <th>Ticket sub status</th>
+      <th>Employee</th>
+      <th>Source</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.batchnumber %></td>
+        <td><%= ticket.manufacturedate %></td>
+        <td><%= ticket.expirydate %></td>
+        <td><%= ticket.purchasepoint %></td>
+        <td><%= ticket.description %></td>
+        <td><%= ticket.resolution %></td>
+        <td><%= ticket.customer %></td>
+        <td><%= ticket.caller_type %></td>
+        <td><%= ticket.ticket_type %></td>
+        <td><%= ticket.ticket_sub_type %></td>
+        <td><%= ticket.product %></td>
+        <td><%= ticket.product_sku %></td>
+        <td><%= ticket.ticket_status %></td>
+        <td><%= ticket.ticket_sub_status %></td>
+        <td><%= ticket.employee %></td>
+        <td><%= ticket.source %></td>
+        
+        <td><%= link_to 'Show', ticket %></td>
+        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%-#<a href="/send_mail">click to send mail</a>%>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'New Ticket', new_ticket_path %>

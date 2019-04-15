@@ -1,0 +1,96 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>Batchnumber:</strong>
+  <%= @ticket.batchnumber %>
+</p>
+
+<p>
+  <strong>Manufacturedate:</strong>
+  <%= @ticket.manufacturedate %>
+</p>
+
+<p>
+  <strong>Expirydate:</strong>
+  <%= @ticket.expirydate %>
+</p>
+
+<p>
+  <strong>Purchasepoint:</strong>
+  <%= @ticket.purchasepoint %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ticket.description %>
+</p>
+
+<p>
+  <strong>Resolution:</strong>
+  <%= @ticket.resolution %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @ticket.customer %>
+</p>
+
+<p>
+  <strong>Caller type:</strong>
+  <%= @ticket.caller_type %>
+</p>
+
+<p>
+  <strong>Ticket type:</strong>
+  <%= @ticket.ticket_type %>
+</p>
+
+<p>
+  <strong>Ticket sub type:</strong>
+  <%= @ticket.ticket_sub_type %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @ticket.product %>
+</p>
+
+<p>
+  <strong>Product sku:</strong>
+  <%= @ticket.product_sku %>
+</p>
+
+<p>
+  <strong>Ticket status:</strong>
+  <%= @ticket.ticket_status %>
+</p>
+
+<p>
+  <strong>Ticket sub status:</strong>
+  <%= @ticket.ticket_sub_status %>
+</p>
+
+<p>
+  <strong>Ticket attachment:</strong>
+  <%= @ticket.ticket_attachment %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @ticket.employee %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @ticket.source %>
+</p>
+
+<p>
+  <strong>Tag user:</strong>
+  <%= @ticket.tag_user %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

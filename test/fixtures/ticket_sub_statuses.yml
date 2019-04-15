@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticketsubstatus: MyString
+  creatredby: 1
+  ticket_status: one
+
+two:
+  ticketsubstatus: MyString
+  creatredby: 1
+  ticket_status: two
