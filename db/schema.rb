@@ -147,7 +147,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_004231) do
     t.integer "product_sku_id"
     t.integer "ticket_status_id"
     t.integer "ticket_sub_status_id"
-    t.integer "ticket_attachment_id"
+    #t.integer "ticket_attachment_id"
     t.integer "employee_id"
     t.integer "source_id"
     t.datetime "created_at", null: false
@@ -158,7 +158,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_004231) do
     t.index ["product_id"], name: "index_tickets_on_product_id"
     t.index ["product_sku_id"], name: "index_tickets_on_product_sku_id"
     t.index ["source_id"], name: "index_tickets_on_source_id"
-    t.index ["ticket_attachment_id"], name: "index_tickets_on_ticket_attachment_id"
+    #t.index ["ticket_attachment_id"], name: "index_tickets_on_ticket_attachment_id"
     t.index ["ticket_status_id"], name: "index_tickets_on_ticket_status_id"
     t.index ["ticket_sub_status_id"], name: "index_tickets_on_ticket_sub_status_id"
     t.index ["ticket_sub_type_id"], name: "index_tickets_on_ticket_sub_type_id"
